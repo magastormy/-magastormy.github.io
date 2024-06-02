@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$TRUMPSTORMY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="images-container">
+        <img src="static/9 trump body.png" id="trump-body" alt="">
+        <img src="static/8 stormy hand.png" alt="">
+        <img src="static/7 stormy leg.png" alt="">
+        <img src="static/6 stormy leg.png" id="stormy-body" alt="">
+        <img src="static/5 stormy leg.png" id="stormy-leg" alt="">
+        <img src="static/4 stormy hand.png" alt="">
+        <img src="static/3 trump hand.png" alt="">
+        <img src="static/2 stormy face.png" id="stormy-head" alt="">
+        <img src="static/1 trump face.png" id="trump-head" alt="">
+    </div>
+    <div id="button" onclick="animate_images()">MAGA</div>
+
+    <script>
+        function animate_images() {
+            document.getElementById('trump-head').style.transform = 'translateX(-50%) translateY(-50%) rotate(3deg)';
+            document.getElementById('stormy-head').style.transform = 'translateX(-50%) translateY(-50%) rotate(-3deg)';
+            document.getElementById('trump-body').style.transform = 'translateX(-50%) translateY(-50%) rotate(-3deg)';
+            document.getElementById('stormy-body').style.transform = 'translateX(-49%) translateY(-50%)';
+            document.getElementById('stormy-leg').style.transform = 'translateX(-49%) translateY(-50%)';
+
+            setTimeout(() => {
+                document.getElementById('trump-head').style.transform = 'translateX(-50%) translateY(-50%) rotate(0deg)';
+                document.getElementById('stormy-head').style.transform = 'translateX(-50%) translateY(-50%) rotate(0deg)';
+                document.getElementById('trump-body').style.transform = 'translateX(-50%) translateY(-50%) rotate(0deg)';
+                document.getElementById('stormy-body').style.transform = 'translateX(-50%) translateY(-50%)';
+                document.getElementById('stormy-leg').style.transform = 'translateX(-50%) translateY(-50%)';
+            }, 200);
+        }
+    </script>
+</body>
+</html>
